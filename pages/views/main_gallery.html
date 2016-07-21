@@ -1,0 +1,9 @@
+<div class="container" id="galcontainer" ng-controller="main_gal_Ctrl">
+  <ul class="dynamic-grid" angular-grid="last_img_gal" ad-grid-width="300" ad-gutter-size="10" ag-angular-grid-id="main-gallery" ad-refresh-on-img-load="true" >
+    <li class="grid" data-ng-repeat="photo in last_img_gal">
+      <a href="{{photo.path}}" data-toggle="lightbox" data-gallery="maingal" data-footer="{{photo.date}} par {{photo.photographe}}, disponible ici : {{photo.categorie}}/{{photo.s_categorie}}/{{photo.galerie}}">
+        <img src="{{photo.path}}"  alt=""/>
+      </a>
+    </li>
+  </ul>
+</div>

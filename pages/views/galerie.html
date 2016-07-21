@@ -1,0 +1,20 @@
+<div class="container">
+
+  <a href="#/">retour index</a><br>
+  <hr>
+
+  <ul class="dynamic-grid" angular-grid="images" ad-grid-width="200" ad-gutter-size="10" ag-angular-grid-id="gallery" ad-refresh-on-img-load="false">
+    <li class="grid" data-ng-clock data-ng-repeat="img in images">
+      <a href="{{img.info_photo.path}}" data-toggle="lightbox" data-gallery="gal" data-footer="{img.info_photo.datePDV}} par {{img.info_photo.photographe}}">
+        <img ng-src="{{img.info_photo.path}}" alt=""/>
+        <p>
+          {{img.id}}
+        </p>
+        <p>
+          {{img.info_photo.photographe}}
+        </p>
+      </a>
+    </li>
+  </ul>
+
+</div>

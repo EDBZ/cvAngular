@@ -1,0 +1,16 @@
+<a href="#/">retour index</a>
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="" ng-click="tab = 1" data-toggle="tab">Upload</a>
+  </li>
+
+  <li>
+    <a href="" ng-click="tab = 2" data-toggle="tab">Supprimer</a>
+  </li>
+
+</ul>
+
+<div ng-include src="upload.url" ng-show="tab===1"></div>
+<div ng-include src="suppr.url" ng-show="tab===2"></div>

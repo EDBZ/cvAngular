@@ -1,0 +1,41 @@
+{
+  "name": "validator.js",
+  "license": "MIT",
+  "author": {
+    "name": "Guillaume Potier",
+    "email": "guillaume@wisembly.com",
+    "url": "http://guillaumepotier.com/"
+  },
+  "main": [
+    "./dist/validator.min.js"
+  ],
+  "keywords": [
+    "validation",
+    "validator",
+    "node",
+    "browser",
+    "library"
+  ],
+  "ignore": [
+    "**/.*",
+    "bin",
+    "src",
+    "tests",
+    "*.json",
+    ".gitignore",
+    ".travis.yml",
+    "Gruntfile.js"
+  ],
+  "version": "2.0.1",
+  "homepage": "https://github.com/guillaumepotier/validator.js",
+  "_release": "2.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.0.1",
+    "commit": "2bc498595a5a0b04679f8fdc4909a0fb2f94f226"
+  },
+  "_source": "https://github.com/guillaumepotier/validator.js.git",
+  "_target": "^2.0.1",
+  "_originalSource": "validator.js",
+  "_direct": true
+}

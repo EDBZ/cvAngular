@@ -1,0 +1,162 @@
+<div ng-controller="supprCtrl">
+  <h3>Supprimer :</h3>
+  {{delete}}
+  <form role="form" data-toggle="validator">
+    <div class="radio">
+      <input required type="radio" class="" ng-click="supr = 1" data-toggle="supr">
+      <label class="col-sm-3">s_categorie</label>
+      <input required type="radio" class="" ng-click="supr = 2" data-toggle="supr">
+      <label class="col-sm-3">galerie</label>
+      <input required type="radio" class="" ng-click="supr = 3" data-toggle="supr">
+      <label class="col-sm-3">photos</label>
+    </div>
+  </form>
+
+  <hr>
+  <!-- suppr s_cat================================================= -->
+  <div class="row" ng-show="supr === 1">
+    <form action="/../php/suppr.php" method="post" role="form" data-toggle="validator">
+      <div class="col-sm-6">
+        <label class="control-label" for="lcategorie">Categories:</label>
+        <div class="radio">
+          <label for="categorie1">
+            <input type="radio" name="choix1" value="erg" ng-click="get_s_cat1()">ERG
+          </label>
+          <label for="categorie1">
+            <input type="radio" name="choix1" value="cfe" ng-click="get_s_cat1()">CFE
+          </label>
+          <label for="categorie1">
+            <input type="radio" name="choix1" value="customer_visit" ng-click="get_s_cat1()">Customer Visit
+          </label>
+          <label for="categorie1">
+            <input type="radio" name="choix1" value="charity" ng-click="get_s_cat1()">Charity
+          </label>
+          <label for="categorie1">
+            <input type="radio" name="choix1" value="internal" ng-click="get_s_cat1()">Internal
+          </label>
+        </div>
+      </div>
+
+      <div id="s_cat1" class="col-sm-6">
+        <label for="">Sous categories :</label>
+        <div ng-repeat="s_c1 in s_categorie1" class="radio">
+          <label for="">
+            <input type="radio" name="choix_s_cat1" value="{{s_c1.s_categorie}}">{{s_c1.s_categorie}}
+          </label>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-10 col-sm-2">
+            <button data-disable="true" type="submit" ng-click="suppr_s_cat()" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- suppr galerie ============================================================================== -->
+  <div class="row" ng-show="supr === 2">
+    <form action="/../php/suppr.php" method="post" role="form" data-toggle="validator">
+      <div class="col-sm-4">
+        <label class="control-label" for="lcategorie">Categories :</label>
+        <div class="radio">
+          <label for="categorie2">
+            <input type="radio" name="choix2" value="erg" ng-click="get_s_cat2()">ERG
+          </label>
+          <label for="categorie2">
+            <input type="radio" name="choix2" value="cfe" ng-click="get_s_cat2()">CFE
+          </label>
+          <label for="categorie2">
+            <input type="radio" name="choix2" value="customer_visit" ng-click="get_s_cat2()">Customer Visit
+          </label>
+          <label for="categorie2">
+            <input type="radio" name="choix2" value="charity" ng-click="get_s_cat2()">Charity
+          </label>
+          <label for="categorie2">
+            <input type="radio" name="choix2" value="internal" ng-click="get_s_cat2()">Internal
+          </label>
+        </div>
+      </div>
+
+      <div id="s_cat2" class="col-sm-4">
+        <label for="">Sous categories :</label>
+        <div ng-repeat="s_c2 in s_categorie2" class="radio">
+          <label for="">
+            <input type="radio" name="choix_s_cat2" value="{{s_c2.s_categorie}}" ng-click="get_gal2()">{{s_c2.s_categorie}}
+          </label>
+        </div>
+        <div class="form-group"></div>
+      </div>
+
+      <div id="gal2" class="col-sm-4">
+        <label for="">Galeries :</label>
+        <div ng-repeat="gal2 in galerie2">
+          <label for="">
+            <input type="radio" name="choix_gal2" value="{{gal2.galerie}}">{{gal2.galerie}}
+          </label>
+        </div>
+        <div class="col-sm-offset-10 col-sm-2">
+          <button data-disable="true" type="submit" ng-click="suppr_s_cat()" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- suppr photo ============================================================================== -->
+  <div class="row" ng-show="supr === 3">
+    <form action="/../php/suppr.php" method="post" role="form" data-toggle="validator">
+      <div class="col-sm-4">
+        <label class="control-label" for="lcategorie">Categories :</label>
+        <div class="radio">
+          <label for="categorie3">
+            <input type="radio" name="choix3" value="erg" ng-click="get_s_cat3()">ERG
+          </label>
+          <label for="categorie3">
+            <input type="radio" name="choix3" value="cfe" ng-click="get_s_cat3()">CFE
+          </label>
+          <label for="categorie3">
+            <input type="radio" name="choix3" value="customer_visit" ng-click="get_s_cat3()">Customer Visit
+          </label>
+          <label for="categorie3">
+            <input type="radio" name="choix3" value="charity" ng-click="get_s_cat3()">Charity
+          </label>
+          <label for="categorie3">
+            <input type="radio" name="choix3" value="internal" ng-click="get_s_cat3()">Internal
+          </label>
+        </div>
+      </div>
+
+      <div id="s_cat3" class="col-sm-4">
+        <label for="">Sous categories :</label>
+        <div ng-repeat="s_c3 in s_categorie3" class="radio">
+          <label for="">
+            <input type="radio" name="choix_s_cat3" value="{{s_c3.s_categorie}}" ng-click="get_gal3()">{{s_c3.s_categorie}}
+          </label>
+        </div>
+      </div>
+
+      <div id="gal3" class="col-sm-4">
+        <label for="">Galeries :</label>
+        <div ng-repeat="gal3 in galerie3">
+          <label for="">
+            <input type="radio" name="choix_gal3" value="{{gal3.galerie}}" ng-click="get_photos()">{{gal3.galerie}}
+          </label>
+        </div>
+      </div>
+
+      <div id="pht3" class="">
+        <label for="">Photos :</label>
+        <ul class="dynamic-grid" angular-grid="photos3" ag-option="angularGridOptions" ag-angular-grid-id="gallery">
+          <li class="grid " data-ng-clock data-ng-repeat="photo in photos3">
+            <img ng-src="{{photo.info_photo.path}}" alt="{{photo.info_photo.nom}}"/>
+            <input type="checkbox" name="check_photo[]" value="{{photo.newName}}">
+            <p>{{photo.info_photo.nom}}
+              {{photo.id}}</p>
+          </li>
+        </ul>
+
+        <div class="col-sm-offset-10 col-sm-2">
+          <button data-disable="true" type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
