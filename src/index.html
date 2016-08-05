@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Emmanuel Debuire</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="../bower_components/angular-loading-bar/src/loading-bar.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="../bower_components/ekko-lightbox/dist/ekko-lightbox.css" media="screen" title="no title" charset="utf-8">
+    <!-- build:css  css/master.min.css-->
+    <link rel="stylesheet" href="css/master.css" media="screen" title="no title" charset="utf-8">
+    <!-- endbuild -->
+    <!--[if lt IE 9]> <script src="src/https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script> <script src="src/https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script> <![endif]-->
+  </head>
+
+  <body id="ng-app" ng-app="mainApp" ng-controller="mainCtrl">
+
+      <div ng-include src="header.url" id="nav_blank"></div>
+
+      <div class="page {{ pageClass }}" ng-view ></div>
+
+    <!-- scripts bower gen-->
+    <script src="../bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="../bower_components/underscore/underscore-min.js" charset="utf-8"></script>
+    <script src="../bower_components/ekko-lightbox/dist/ekko-lightbox.min.js" charset="utf-8"></script>
+    <!-- script bower Ng -->
+    <script src="../bower_components/angular/angular.min.js" charset="utf-8"></script>
+    <script src="../bower_components/angular-animate/angular-animate.min.js" charset="utf-8"></script>
+    <script src="../bower_components/angular-route/angular-route.min.js" charset="utf-8"></script>
+    <script src="../bower_components/ng-file-upload/ng-file-upload.min.js" charset="utf-8"></script>
+    <script src="../bower_components/angular-loading-bar/src/loading-bar.js" charset="utf-8"></script>
+    <script src="../bower_components/angulargrid/angulargrid.js" charset="utf-8"></script>
+
+   <!-- my scripts -->
+   <!-- build:js js/mainApp.min.js -->
+   <script src="js/mainApp.js" charset="utf-8"></script>
+   <!-- endbuild -->
+   <!-- build:js js/controller.min.js -->
+    <script src="js/controller/mainCtrl.js" charset="utf-8"></script>
+    <script src="js/controller/contactCtrl.js" charset="utf-8"></script>
+    <script src="js/controller/devCtrl.js" charset="utf-8"></script>
+    <script src="js/controller/photoCtrl.js" charset="utf-8"></script>
+    <script src="js/controller/galCtrl.js" charset="utf-8"></script>
+    <script src="js/controller/uploadCtrl.js" charset="utf-8"></script>
+    <script src="js/controller/supprCtrl.js" charset="utf-8"></script>
+    <script src="js/controller/visiteursCtrl.js" charset="utf-8"></script>
+    <!-- endbuild -->
+    <!-- build:js js/service.min.js -->
+    <script src="js/service/getjson.js" charset="utf-8"></script>
+    <!-- endbuild -->
+
+    <!-- js général -->
+    <!-- build:js js/myjs.min.js -->
+    <script src="js/myjs.js" charset="utf-8"></script>
+    <!-- endbuild -->
+  </body>
+</html>

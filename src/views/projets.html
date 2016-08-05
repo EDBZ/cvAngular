@@ -1,0 +1,17 @@
+<section class="section" id="projets">
+  <div class="container">
+    <h2>Projets</h2>
+    <div class="sub col-xs-12">
+      <div id="projetsImg">
+        <a href="{{projet.preview}}" class="col-md-4 col-xs-12 projet" ng-repeat="projet in projets | orderBy:'id'" data-toggle="lightbox" data-gallery="projetgal" data-footer="<h4 class='titre-modal'>{{projet.titre}}</h4><br>{{projet.description}}<p ng-if='{{projet.link}}'>Projet visible <a href='{{projet.link}}' target='blank'>ici</a></p>">
+          <img ng-src="{{projet.preview}}" alt=""/>
+          <div class="cacheprojet">
+            <p class="thumbnameprojet">
+              {{projet.titre}}
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

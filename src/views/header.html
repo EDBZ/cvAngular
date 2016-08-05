@@ -1,0 +1,65 @@
+<nav class="navbar navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <img src="img/menu-button.png" class="menu-button" alt="" />
+      </button>
+      <a class="navbar-brand" href="#/">
+        <img class="logo" id="tdm" src="img/logo.jpg" alt="EDBZ"/>
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a ng-click="reloadRoute()" ng-href="#/">EDBZ</a>
+        </li>
+        <li class="dropdown">
+          <a ng-click="reloadRoute()" class="dropdown-toggle">Développeur
+            <span class="caret"></span>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#/developper">Compétences</a>
+            </li>
+            <li>
+              <a href="#/projets">Projets</a>
+            </li>
+          </ul>
+
+        </li>
+        <li class="dropdown">
+          <a ng-click="reloadRoute()" ng-href="#/photographe">Photographe
+          </a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="#/contact">Contact</a>
+        </li>
+        <li>
+          <a href="img/CV_DEBUIRE.pdf" download="CV_DEBUIRE.pdf">CV</a>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#/">
+            <span class="glyphicon glyphicon-log-in"></span>
+          </a>
+          <div class="dropdown-menu">
+            <form id="formLogin" class="form container-fluid" method="post" action="../php/login.php">
+              <div class="form-group">
+                <label for="nom">Nom:</label>
+                <input type="text" class="form-control" id="nom" name="nom">
+              </div>
+              <div class="form-group">
+                <label for="mdp">Mdp:</label>
+                <input type="password" class="form-control" id="mdp" name="mdp">
+              </div>
+              <button type="submit" id="btnLogin" class="btn btn-block">Login</button>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

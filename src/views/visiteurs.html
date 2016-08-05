@@ -1,0 +1,28 @@
+<div ng-controller="visiteursCtrl">
+  <div id="visit" class="row form_upload">
+    <div class="table-responsive">
+      <table class="table table-hover table-striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nom</th>
+            <th>Mail</th>
+            <th>Tel</th>
+            <th>Message</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="v in visiteurs">
+            <td>{{v.id}}</td>
+            <td>{{v.nom}}</td>
+            <td>{{v.mail}}</td>
+            <td>{{v.tel}}</td>
+            <td>{{v.message}}</td>
+            <td>{{v.date_ajout}}</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+  </div>
+</div>

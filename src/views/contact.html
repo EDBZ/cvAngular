@@ -1,0 +1,39 @@
+<section class="container" id="contact">
+  <h2>contact</h2>
+  <!-- <pre class="test">
+    {{reponse}}
+  </pre> -->
+  <div id="sites_ext">
+    <ul>
+      <li class="icones-liens border">
+        <a href="https://github.com/EDBZ" target="_blank"><img src="img/logo-gh.png" alt="gh" style="filter:invert(100%)"/></a>
+        <a href="https://fr.linkedin.com/in/emmanueldebuire" target="_blank"><img src="img/logo-ln.png" alt="ln"/></a>
+        <a href="https://twitter.com/manudebuire" target="_blank"><img src="img/logo-tw.png" alt="tw"/></a>
+        <a href="http://edbz.tumblr.com/" target="_blank"><img src="img/logo-t.png" alt="t"/></a>
+      </li>
+    </ul>
+  </div>
+<div class="border contact_base">
+  <a href="mailto:emmanueldebuire@gmail.com?Subject=SiteCV">emmanueldebuire@gmail.com</a> <br>
+  06 81 87 23 85
+</div>
+  <div id="formulaire_contact">
+    <form method="post" action="../php/contact.php" class="form-horizontal" enctype="multipart/form-data">
+
+      <div class="info_contact">
+        <input required class="col-xs-12 border" type="text" name="nom" id="nom" placeholder="Nom"/>
+        <input required class="col-xs-12 border" type="email" name="mail" id="mail" placeholder="eMail"/>
+        <input required class="col-xs-12 border" type="tel" name="tel" id="tel" placeholder="Téléphone"/>
+      </div>
+
+      <div class="info_c">
+        <textarea class="message border" required name="message" id="message" placeholder="Votre message..."></textarea>
+      </div>
+
+      <div id="boutons">
+        <input type="reset" class="col-xs-3 bouton border"/>
+        <input type="submit" class="col-xs-offset-6 col-xs-3 bouton border"/>
+      </div>
+    </form>
+  </div>
+</section>

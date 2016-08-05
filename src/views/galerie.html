@@ -1,0 +1,12 @@
+<section class="container" id="galerie">
+
+<h2>{{images[1].galerie}}</h2>
+  <ul class="dynamic-grid" angular-grid="images" ad-grid-width="200" ad-gutter-size="10" ag-angular-grid-id="gallery" ad-refresh-on-img-load="false">
+    <li class="grid" data-ng-clock data-ng-repeat="img in images">
+      <a href="{{img.chemin}}" data-toggle="lightbox" data-gallery="gal">
+        <img ng-src="{{img.chemin}}" alt=""/>
+      </a>
+    </li>
+  </ul>
+
+</section>

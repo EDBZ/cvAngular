@@ -1,0 +1,108 @@
+<div ng-controller="supprCtrl">
+  <div id="suppr" class="row form_upload">
+
+  <form role="form" data-toggle="validator">
+    <fieldset>
+      <legend>Supprimer :
+      </legend>
+      <div class="radio">
+        <input type="radio" class="" ng-click="supr = 1"  data-toggle="supr">
+        <label class="col-sm-3">Photo</label>
+        <input type="radio" class="" ng-click="supr = 2" data-toggle="supr">
+        <label class="col-sm-3">Projet</label>
+        <input type="radio" class="" ng-click="supr = 3" data-toggle="supr">
+        <label class="col-sm-3">Language</label>
+      </div>
+    </fieldset>
+  </form>
+</div>
+
+  <!-- suppr photo ============================================================================== -->
+  <div class="row form_upload" ng-show="supr === 1">
+    <form action="/../php/suppr.php" method="post" role="form" data-toggle="validator">
+      <fieldset>
+        <legend>Galeries :
+        </legend>
+
+        <div class="col-sm-offset-10 col-sm-2">
+          <button data-disable="true" type="submit" class="btn btn-primary" onsubmit="suppr_photo()">Submit</button>
+        </div>
+
+
+      <div id="gal" class="col-sm-12">
+        <div ng-repeat="gal in galerie">
+          <input type="radio" name="choix_gal" value="{{gal}}" ng-click="get_photos()">
+          <label>{{gal}}</label>
+        </div>
+      </div>
+
+      <div id="pht" class="col-sm-12">
+        <legend>Photos
+        </legend>
+        <ul class="dynamic-grid" angular-grid="photos" ag-option="angularGridOptions" ag-angular-grid-id="gallery">
+          <li class="grid " data-ng-clock data-ng-repeat="photo in photos">
+            <img ng-src="{{photo.chemin}}" alt="{{photo.nom}}"/>
+            <input type="checkbox" name="check_photo[]" value="{{photo.chemin}}">
+            <p>{{photo.nom}}</p>
+          </li>
+        </ul>
+
+      </div>
+    </fieldset>
+
+    </form>
+  </div>
+
+  <!-- suppr projets ============================================================================== -->
+  <div class="row form_upload" ng-show="supr === 2">
+    <form action="/../php/suppr.php" method="post" role="form" data-toggle="validator">
+      <fieldset>
+        <legend>Projets
+        </legend>
+
+        <div class="col-sm-offset-10 col-sm-2">
+          <button data-disable="true" type="submit" class="btn btn-primary" onsubmit="suppr_photo()">Submit</button>
+        </div>
+
+
+
+      <div id="pjt" class="col-sm-12">
+        <ul class="row" >
+          <li class="col-md-3 col-xs-6" data-ng-repeat="projet in projets">
+            <img ng-src="{{projet.preview}}" alt="{{projet.titres}}"/>
+            <input type="checkbox" name="check_projet[]" value="{{projet.preview}}">
+            <p>{{projet.titres}}</p>
+          </li>
+        </ul>
+      </div>
+
+    </fieldset>
+    </form>
+  </div>
+  <!-- suppr languages ============================================================================== -->
+  <div class="row" ng-show="supr === 3">
+    <form action="/../php/suppr.php" method="post" role="form" data-toggle="validator">
+      <fieldset>
+        <legend>Languages
+        </legend>
+
+        <div class="col-sm-offset-10 col-sm-2">
+          <button data-disable="true" type="submit" class="btn btn-primary" onsubmit="suppr_photo()">Submit</button>
+        </div>
+
+
+      <div id="lgs" class="col-sm-12">
+        <div class="lgs-rpt">
+          <div class="lgs-one" data-ng-repeat="language in languages">
+            <img ng-src="{{language.logo}}" alt="{{language.nom}}"/>
+            <input type="checkbox" name="check_language[]" value="{{language.logo}}">
+            <p>{{language.nom}}</p>
+          </div>
+        </div>
+      </div>
+
+    </fieldset>
+    </form>
+  </div>
+
+</div>
