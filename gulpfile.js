@@ -1,3 +1,6 @@
+//sudo gulp init
+//sudo npm install --save gulp gulp-angular-htmlify gulp-csscomb gulp-autoprefixer gulp-cssbeautify gulp-htmlmin gulp-image gulp-angular-injector gulp-bower-files-from-html gulp-bower-files-from-html gulp-useref gulp-if gulp-concat gulp-uglify gulp-clean-css gulp-connect-php gulp-util vinyl-ftp gulp-livereload run-sequence
+
 // Requis
 var gulp = require('gulp');
 
@@ -54,12 +57,12 @@ gulp.task('deploy', function() {
 // Tache Serveur====================================
 gulp.task('server', function() {
   php.server({
-    port: 3000, // Port (8000 par défaut)
-    base: dev // Base du projet
+    port: 3000,
+    base: dev
   });
   php.server({
-    port: 3030, // Port (8000 par défaut)
-    base: prod // Base du projet
+    port: 3030,
+    base: prod
   });
 
 });
@@ -238,19 +241,8 @@ gulp.task('copyviewprod', function() {
     })
     .pipe(gulp.dest(prod));
 });
+
 gulp.task('copyprod', ['copyviewprod', 'imageprod', 'bowerprod', 'htaccessprod', 'copyfontprod', ])
-  // Tache PHP============================================
-gulp.task('php', function() {
-  return gulp.src(dev + 'php/*.php', {
-      read: false
-    })
-    .pipe(phpMinify())
-    .pipe(gulp.dest(prod + 'php/'))
-    .pipe(notify({
-      message: 'php task complete',
-      onLast: true
-    }));
-});
 
 // WATCH ===========================================
 gulp.task('watch', function() {

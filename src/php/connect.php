@@ -1,9 +1,9 @@
 <?php
   /****** Database Details *********/
-// $host = "emmanuel.debuire.sql.free.fr";
-// $user = "emmanuel.debuire";
-// $pass = "1753vy31JBG067";
-// $base = "emmanuel_debuire";
+$host = "emmanuel.debuire.sql.free.fr";
+$user = "emmanuel.debuire";
+$pass = "1753vy31JBG067";
+$base = "emmanuel_debuire";
     $host      = "localhost";
     $user      = "root";
     $pass      = "1753vy31";

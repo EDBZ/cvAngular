@@ -194,16 +194,19 @@ nav a {
 }
 #projetsImg a {
   margin: 20px auto;
+
 }
 #projetsImg a img {
-  width: 250px;
+  width: 240px;
+  max-height: 160px;
+  overflow: hidden;
   border-radius: 5px;
   box-shadow: 9px 10px 14px -8px rgba(0, 0, 0, .75);
 }
 .cacheprojet {
   position: absolute;
   top: 0;
-  width: 250px;
+  width: 240px;
   height: 100%;
   transition: opacity .3s ease-in;
   opacity: 0;
@@ -224,7 +227,6 @@ nav a {
    ========================================================================== */
 
 .pagePhoto {
-  /*height: 100%;*/
   background-image: url(../img/fondphoto.jpg);
   background-attachment: fixed;
   background-size: cover;
